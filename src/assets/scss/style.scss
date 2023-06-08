@@ -1,0 +1,73 @@
+@import "mixins";
+@import "vars";
+@import "vendor/reset";
+// @import url("./../fonts/stylesheet.css");
+
+@font-face {
+  font-family: "Muller";
+  src: local("MullerMedium"), local("MullerMedium"),
+    url("./../fonts/muller/MullerMedium.woff2") format("woff2"),
+    url("./../fonts/muller/MullerMedium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Muller";
+  src: local("MullerBold"), local("MullerBold"),
+    url("./../fonts/muller/MullerBold.woff2") format("woff2"),
+    url("./../fonts/muller/MullerBold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "MullerRegular";
+  src: local("MullerRegular"), local("MullerRegular"),
+    url("./../fonts/muller/MullerRegular.woff2") format("woff2"),
+    url("./../fonts/muller/MullerRegular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+html {
+  font-size: 24x;
+}
+
+body {
+  font-family: "MullerRegular";
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 24px;
+  color: $black;
+
+  &._lock {
+    overflow: hidden;
+  }
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.orange {
+  color: $orange;
+}
+
+.blue {
+  color: $blue;
+}
+
+/* Blocks */
+@import "blocks/container";
+@import "blocks/btn";
+@import "blocks/intro";
+@import "blocks/title";
+@import "blocks/game";

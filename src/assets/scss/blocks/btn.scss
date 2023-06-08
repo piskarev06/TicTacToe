@@ -1,0 +1,38 @@
+.btn {
+  display: inline-block;
+  padding: 25px 60px;
+
+  cursor: pointer;
+  border-radius: 40px;
+
+  font-family: inherit;
+  font-weight: 500;
+  font-size: inherit;
+  line-height: inherit;
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+
+  transition: all 0.3s linear;
+
+  &:hover {
+    background: none;
+    // color: $accent;
+  }
+
+  &--blue {
+    background: $blue;
+
+    &:hover {
+      background: #5495de;
+    }
+  }
+
+  &--orange {
+    background: $orange;
+
+    &:hover {
+      background: #de793b;
+    }
+  }
+}
