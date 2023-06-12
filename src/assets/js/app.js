@@ -1,5 +1,4 @@
 let game = document.querySelector(".game__fields"),
-  three,
   res = document.querySelector(".res"),
   player = document.querySelector(".player"),
   btnGame = document.querySelector(".new-game"),
@@ -52,20 +51,25 @@ let cross = () => {
 };
 
 function stepCross(target) {
-  target.innerHTML = cross();
-  target.classList.add("x");
-  count++;
+  if (!target.innerHTML) {
+    target.innerHTML = cross();
+    target.classList.add("x");
+    count++;
+    step = !step;
+  }
 }
 function stepZero(target) {
-  target.innerHTML = circle();
-  target.classList.add("o");
-  count++;
+  if (!target.innerHTML) {
+    target.innerHTML = circle();
+    target.classList.add("o");
+    count++;
+    step = !step;
+  }
 }
 
 function init(e) {
   if (!step) stepCross(e.target);
   else stepZero(e.target);
-  step = !step;
   win();
 }
 
